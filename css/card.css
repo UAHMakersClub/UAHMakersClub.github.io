@@ -1,0 +1,88 @@
+.cardslot{
+    display:inline-block;
+    -webkit-perspective-origin: center center;
+            perspective-origin: center center;
+    cursor: pointer;
+}
+
+.hovercard{
+    -webkit-transition: -webkit-transform ease 0.4s;
+            transition: transform ease 0.4s;
+    vertical-align: middle;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    border:none;
+    margin:0 auto;
+}
+
+.hovercard:hover {
+    -webkit-transform: scale(0.95,0.95);
+        -ms-transform: scale(0.95,0.95);
+            transform: scale(0.95,0.95);
+}
+
+.flipcard{
+    display:inline-block;
+    max-width:100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.8s ease;
+            transition: transform 0.8s ease;
+    -webkit-perspective-origin: center center;
+            perspective-origin: center center;
+    -webkit-transform-origin:center center;
+        -ms-transform-origin:center center;
+            transform-origin:center center;
+}
+
+.rotated{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.front{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+    
+}
+.back{
+    position:absolute;
+    -webkit-transform: rotateY(180deg) translate3d(0px, 0px, 1px);
+            transform: rotateY(180deg) translate3d(0px, 0px, 1px);
+    width: 100%;
+    vertical-align: middle;
+    overflow: auto;
+    margin:0 auto;
+    
+}
+
+.card {
+    max-width:100%;
+    display:inline-block;
+    vertical-align: middle;
+    border:none;
+    margin:0 auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cardtext{
+    position:absolute;
+    width: 100%;
+    -webkit-transform: rotateY(180deg) translate3d(0px, 0px, 2px);
+            transform: rotateY(180deg) translate3d(0px, 0px, 2px);
+    max-width:86%;
+    display:inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    border:none;
+    margin:0 auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    color: #ffffdc;
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    line-height:130%;
+}
